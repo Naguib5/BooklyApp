@@ -18,7 +18,7 @@ class HomeViewBody extends StatelessWidget {
             height: 50,
           ),
           Text(
-            'Best seller',
+            'Best Seller',
             style: Styles.titleMedium,
           )
         ],
