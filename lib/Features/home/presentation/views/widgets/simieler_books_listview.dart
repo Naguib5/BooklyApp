@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 class SimilerBooksListview extends StatelessWidget {
   const SimilerBooksListview({super.key});
-
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -17,6 +16,5 @@ class SimilerBooksListview extends StatelessWidget {
             );
           })),
     );
-    ;
   }
 }
