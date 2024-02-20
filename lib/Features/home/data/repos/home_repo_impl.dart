@@ -3,6 +3,7 @@ import 'package:bookly/Features/home/data/repos/home_repo.dart';
 import 'package:bookly/core/errors/failure.dart';
 import 'package:bookly/core/utils/api_service.dart';
 import 'package:dartz/dartz.dart';
+import 'package:dio/dio.dart';
 
 class HomeRepoImpl implements HomeRepo {
   ApiService apiService;
@@ -20,8 +21,18 @@ class HomeRepoImpl implements HomeRepo {
       }
       return right(books);
     } on Exception catch (e) {
-      // TODO
-      return left(ServerFailure());
+      // ignore: deprecated_member_use
+      if (e is DioError) {
+        return left(
+          ServerFailure.fromDioError(e),
+        );
+      }
+      ;
+      return left(
+        ServerFailure(
+          errMessage: e.toString(),
+        ),
+      );
     }
   }
 
