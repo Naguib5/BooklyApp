@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // ignore: depend_on_referenced_packages
 import 'package:bloc/bloc.dart';
 import 'package:bookly/Features/home/data/models/book_model/book_model.dart';
@@ -22,6 +21,3 @@ class FeaturedBooksCubit extends Cubit<FeaturedBooksState> {
     });
   }
 }
-=======
-
->>>>>>> 1b620fa91582240679a96fde133db2d5c20b513a
