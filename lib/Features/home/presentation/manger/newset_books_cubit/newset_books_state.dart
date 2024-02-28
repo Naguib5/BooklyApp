@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 part of 'newset_books_cubit.dart';
 
 sealed class NewsetBooksState extends Equatable {
@@ -8,3 +9,6 @@ sealed class NewsetBooksState extends Equatable {
 }
 
 final class NewsetBooksInitial extends NewsetBooksState {}
+=======
+
+>>>>>>> 1b620fa91582240679a96fde133db2d5c20b513a

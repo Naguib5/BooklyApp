@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 part of 'featured_books_cubit.dart';
 
 sealed class FeaturedBooksState extends Equatable {
@@ -20,3 +21,6 @@ final class FeaturedBooksSuccess extends FeaturedBooksState {
 
   const FeaturedBooksSuccess(this.books);
 }
+=======
+
+>>>>>>> 1b620fa91582240679a96fde133db2d5c20b513a
