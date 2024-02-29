@@ -16,7 +16,9 @@ class BookDetaielsSection extends StatelessWidget {
         const CustomAppBookDetaielsAppBar(),
         Padding(
           padding: EdgeInsets.symmetric(horizontal: width * .19),
-          child: const CustomBookImage(),
+          child: const CustomBookImage(
+              imageUrl:
+                  'https://images.pexels.com/photos/45853/grey-crowned-crane-bird-crane-animal-45853.jpeg?auto=compress&cs=tinysrgb&w=600'),
         ),
         const SizedBox(
           height: 43,

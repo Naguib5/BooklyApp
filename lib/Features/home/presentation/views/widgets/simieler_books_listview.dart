@@ -12,7 +12,9 @@ class SimilerBooksListview extends StatelessWidget {
           itemBuilder: ((context, index) {
             return const Padding(
               padding: EdgeInsets.symmetric(horizontal: 5),
-              child: CustomBookImage(),
+              child: CustomBookImage(
+                  imageUrl:
+                      'https://images.pexels.com/photos/45853/grey-crowned-crane-bird-crane-animal-45853.jpeg?auto=compress&cs=tinysrgb&w=600'),
             );
           })),
     );
