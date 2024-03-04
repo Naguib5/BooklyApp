@@ -6,9 +6,11 @@ class CustomWidgetError extends StatelessWidget {
   const CustomWidgetError({super.key, required this.msgError});
   @override
   Widget build(BuildContext context) {
-    return Text(
-      msgError,
-      style: Styles.textStyle18,
+    return Center(
+      child: Text(
+        msgError,
+        style: Styles.textStyle18,
+      ),
     );
   }
 }

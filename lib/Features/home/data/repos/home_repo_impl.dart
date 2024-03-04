@@ -21,6 +21,7 @@ class HomeRepoImpl implements HomeRepo {
       }
       return right(books);
     } on Exception catch (e) {
+      // return left(ServerFailure(errMessage: e.toString()));
       // ignore: deprecated_member_use
       if (e is DioError) {
         return left(
