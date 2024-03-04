@@ -4,8 +4,13 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class BookRating extends StatelessWidget {
   // ignore: use_key_in_widget_constructors
-  const BookRating({this.mainAxisAlignment = MainAxisAlignment.start});
+  const BookRating(
+      {this.mainAxisAlignment = MainAxisAlignment.start,
+      required this.rating,
+      required this.count});
   final MainAxisAlignment mainAxisAlignment;
+  final String rating;
+  final int count;
   @override
   Widget build(BuildContext context) {
     return Row(
