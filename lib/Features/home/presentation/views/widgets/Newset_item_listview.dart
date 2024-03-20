@@ -1,7 +1,6 @@
 import 'package:bookly/Features/home/presentation/manger/newset_books_cubit/newset_books_cubit.dart';
 import 'package:bookly/Features/home/presentation/views/widgets/Newset_list_view_item.dart';
 import 'package:bookly/Features/home/presentation/views/widgets/shimmer_widget/shimmer_newset_item_list_view.dart';
-import 'package:bookly/core/widgets/custom_widget_error.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shimmer/shimmer.dart';

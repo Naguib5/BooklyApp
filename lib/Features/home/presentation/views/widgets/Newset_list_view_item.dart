@@ -64,8 +64,8 @@ class BookListViewItem extends StatelessWidget {
                       ),
                       const Spacer(),
                       BookRating(
-                        rating: bookModel.volumeInfo.maturityRating!,
-                        count: bookModel.volumeInfo.pageCount!,
+                        rating: bookModel.volumeInfo.maturityRating.toString(),
+                        count: bookModel.volumeInfo.pageCount ?? 0,
                       )
                     ],
                   )

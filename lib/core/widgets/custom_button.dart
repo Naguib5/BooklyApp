@@ -2,13 +2,15 @@ import 'package:bookly/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
+  final void Function()? onPressed;
   const CustomButton(
       {super.key,
       this.borderRadius,
       required this.backgroundColor,
       required this.textcolor,
       required this.text,
-      this.fontsize});
+      this.fontsize,
+      this.onPressed});
   final BorderRadiusGeometry? borderRadius;
   final Color backgroundColor;
   final Color textcolor;
@@ -25,7 +27,7 @@ class CustomButton extends StatelessWidget {
             shape: RoundedRectangleBorder(
               borderRadius: borderRadius ?? BorderRadius.circular(12),
             )),
-        onPressed: () {},
+        onPressed: onPressed,
         child: Text(
           text,
           style: Styles.textStyle20.copyWith(
