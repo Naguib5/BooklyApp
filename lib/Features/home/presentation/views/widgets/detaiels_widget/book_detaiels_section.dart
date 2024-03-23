@@ -1,9 +1,9 @@
-import 'package:bookly/Features/home/data/models/book_model/book_model.dart';
-import 'package:bookly/Features/home/presentation/views/widgets/book_rating.dart';
-import 'package:bookly/Features/home/presentation/views/widgets/books_action.dart';
-import 'package:bookly/Features/home/presentation/views/widgets/custom_app_book_detaiels_appbar.dart';
+import 'package:bookly/core/models/book_model/book_model.dart';
+import 'package:bookly/Features/home/presentation/views/widgets/detaiels_widget/books_action.dart';
+import 'package:bookly/Features/home/presentation/views/widgets/detaiels_widget/custom_app_book_detaiels_appbar.dart';
 import 'package:bookly/Features/home/presentation/views/widgets/custom_book_item.dart';
 import 'package:bookly/core/utils/styles.dart';
+import 'package:bookly/core/widgets/two_raw_text_with_opacity.dart';
 import 'package:flutter/material.dart';
 
 class BookDetaielsSection extends StatelessWidget {
@@ -47,10 +47,32 @@ class BookDetaielsSection extends StatelessWidget {
         const SizedBox(
           height: 18,
         ),
-        BookRating(
-          rating: book.volumeInfo.maturityRating.toString(),
-          count: book.volumeInfo.pageCount!,
-          mainAxisAlignment: MainAxisAlignment.center,
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            TwoRowTextWithOpacity(
+              bookModel: book,
+              text1: const Text(
+                'language: ',
+                style: TextStyle(fontSize: 16),
+              ),
+              text2: Text(
+                '${book.volumeInfo.language}',
+                style:
+                    const TextStyle(fontSize: 16, fontWeight: FontWeight.w200),
+              ),
+            ),
+            TwoRowTextWithOpacity(
+              bookModel: book,
+              text1: const Text(
+                'pages: ',
+                style: TextStyle(fontSize: 16),
+              ),
+              text2: Text('${book.volumeInfo.pageCount}',
+                  style: const TextStyle(
+                      fontSize: 16, fontWeight: FontWeight.w200)),
+            )
+          ],
         ),
         const SizedBox(
           height: 30,

@@ -1,9 +1,9 @@
-import 'package:bookly/Features/home/data/models/book_model/book_model.dart';
-import 'package:bookly/Features/home/presentation/views/widgets/book_rating.dart';
+import 'package:bookly/core/models/book_model/book_model.dart';
 import 'package:bookly/Features/home/presentation/views/widgets/custom_book_item.dart';
 import 'package:bookly/constants.dart';
 import 'package:bookly/core/utils/app_router.dart';
 import 'package:bookly/core/utils/styles.dart';
+import 'package:bookly/core/widgets/two_raw_text_with_opacity.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -47,9 +47,19 @@ class BookListViewItem extends StatelessWidget {
                   const SizedBox(
                     height: 3,
                   ),
-                  Text(
-                    bookModel.volumeInfo.authors!.first,
-                    style: Styles.textStyle14,
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        bookModel.volumeInfo.authors!.first,
+                        style: Styles.textStyle14,
+                      ),
+                      TwoRowTextWithOpacity(
+                        bookModel: bookModel,
+                        text1: const Text('language: '),
+                        text2: Text('${bookModel.volumeInfo.language}'),
+                      ),
+                    ],
                   ),
                   const SizedBox(
                     height: 3,
@@ -63,9 +73,10 @@ class BookListViewItem extends StatelessWidget {
                             .copyWith(fontWeight: FontWeight.bold),
                       ),
                       const Spacer(),
-                      BookRating(
-                        rating: bookModel.volumeInfo.maturityRating.toString(),
-                        count: bookModel.volumeInfo.pageCount ?? 0,
+                      TwoRowTextWithOpacity(
+                        bookModel: bookModel,
+                        text1: const Text('pages: '),
+                        text2: Text('${bookModel.volumeInfo.pageCount}'),
                       )
                     ],
                   )

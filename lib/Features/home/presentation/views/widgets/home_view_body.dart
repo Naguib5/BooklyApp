@@ -1,6 +1,6 @@
-import 'package:bookly/Features/home/presentation/views/widgets/Newset_item_listview.dart';
+import 'package:bookly/Features/home/presentation/views/widgets/newset_widget/Newset_item_listview.dart';
 import 'package:bookly/Features/home/presentation/views/widgets/custom_app_par.dart';
-import 'package:bookly/Features/home/presentation/views/widgets/featured_list_view.dart';
+import 'package:bookly/Features/home/presentation/views/widgets/featured_widget/featured_list_view.dart';
 import 'package:bookly/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
@@ -16,10 +16,13 @@ class HomeViewBody extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 30),
+                padding: EdgeInsets.symmetric(horizontal: 18),
                 child: CustomAppBar(),
               ),
-              FeaturedBookListView(),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20),
+                child: FeaturedBookListView(),
+              ),
               SizedBox(
                 height: 50,
               ),
