@@ -38,10 +38,7 @@ class _RegisterPageState extends State<RegisterPage> {
             padding: const EdgeInsets.symmetric(horizontal: 12),
             child: ListView(children: [
               const SizedBox(
-                height: 10,
-              ),
-              const SizedBox(
-                height: 12,
+                height: 22,
               ),
               Image.asset(
                 "assets/images/book_icon.png",
@@ -57,9 +54,6 @@ class _RegisterPageState extends State<RegisterPage> {
                           color: Colors.white,
                           fontFamily: 'Pacifico')),
                 ],
-              ),
-              const SizedBox(
-                height: 18,
               ),
               const SizedBox(
                 height: 40,
@@ -83,6 +77,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 height: 16,
               ),
               CustomTextField(
+                obscureText: true,
                 onChanged: (data) {
                   password = data;
                 },
@@ -98,6 +93,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     setState(() {});
                     try {
                       await userRegister();
+                      GoRouter.of(context).push(AppRouter.kloginpage);
                       showSnackBar(context, 'successfully registered.');
                     } on FirebaseAuthException catch (e) {
                       if (e.code == 'weak-password') {

@@ -1,16 +1,13 @@
-import 'package:bookly/Features/auth/on_bording_screen.dart/intro_page1.dart';
-import 'package:bookly/Features/auth/on_bording_screen.dart/intro_page2.dart';
-import 'package:bookly/Features/auth/on_bording_screen.dart/intro_page3.dart';
-import 'package:bookly/Features/auth/sign_up_screen/register_page.dart';
+import 'package:bookly/Features/on_bording_screen.dart/intro_page1.dart';
+import 'package:bookly/Features/on_bording_screen.dart/intro_page2.dart';
+import 'package:bookly/Features/on_bording_screen.dart/intro_page3.dart';
 import 'package:bookly/core/utils/app_router.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class OnBoardingScreen extends StatefulWidget {
   OnBoardingScreen({super.key});
-
   @override
   State<OnBoardingScreen> createState() => _OnBoardingScreenState();
 }
@@ -31,9 +28,9 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               },
               controller: _controller,
               children: [
-                IntroPage1(),
-                IntroPage2(),
-                IntroPage3(),
+                IntroPage1(), //0
+                IntroPage2(), //1
+                IntroPage3(), //2
               ]),
           Container(
               alignment: Alignment(0, 0.8),
@@ -52,7 +49,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                       ? TextButton(
                           onPressed: () {
                             GoRouter.of(context).push(
-                              AppRouter.kregisterpage,
+                              AppRouter.kloginpage,
                             );
                           },
                           child: const Text("DONE"),
