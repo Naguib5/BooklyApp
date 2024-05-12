@@ -1,7 +1,9 @@
 import 'package:bookly/Features/home/presentation/manger/newset_books_cubit/newset_books_cubit.dart';
 import 'package:bookly/Features/home/presentation/views/widgets/newset_widget/Newset_list_view_item.dart';
 import 'package:bookly/Features/home/presentation/views/widgets/shimmer_widget/shimmer_newset_item_list_view.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shimmer/shimmer.dart';
 

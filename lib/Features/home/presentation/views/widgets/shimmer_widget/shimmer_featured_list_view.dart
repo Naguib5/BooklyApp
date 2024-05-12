@@ -1,13 +1,20 @@
 import 'package:flutter/material.dart';
 
-class ShimmerFeaturedListView extends StatelessWidget {
+class ShimmerFeaturedListView extends StatefulWidget {
   const ShimmerFeaturedListView({super.key});
+
+  @override
+  State<ShimmerFeaturedListView> createState() =>
+      _ShimmerFeaturedListViewState();
+}
+
+class _ShimmerFeaturedListViewState extends State<ShimmerFeaturedListView> {
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20),
       child: SizedBox(
-        height: MediaQuery.of(context).size.height * .24,
+        height: MediaQuery.of(context).size.height * .20,
         child: ListView.builder(
             physics: const BouncingScrollPhysics(),
             itemCount: 10,

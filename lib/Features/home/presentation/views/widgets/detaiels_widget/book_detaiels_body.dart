@@ -3,8 +3,8 @@ import 'package:bookly/Features/home/presentation/views/widgets/detaiels_widget/
 import 'package:bookly/Features/home/presentation/views/widgets/similar_widget/similar_Book_section.dart';
 import 'package:flutter/material.dart';
 
-class BookDetaielsBody extends StatelessWidget {
-  const BookDetaielsBody({super.key, required this.bookModel});
+class BookDetailsBody extends StatelessWidget {
+  const BookDetailsBody({super.key, required this.bookModel});
   final BookModel bookModel;
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,7 @@ class BookDetaielsBody extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 30),
             child: Column(
               children: [
-                BookDetaielsSection(
+                BookDetailsSection(
                   book: bookModel,
                 ),
                 const Expanded(

@@ -38,9 +38,10 @@ class SimilerBooksListview extends StatelessWidget {
           );
         } else if (state is SimilarBooksFailure) {
           return Shimmer.fromColors(
-              baseColor: Colors.grey[500]!,
-              highlightColor: Colors.grey[100]!,
-              child: const ShimmerFeaturedListView());
+            baseColor: Colors.grey[500]!,
+            highlightColor: Colors.grey[100]!,
+            child: const ShimmerFeaturedListView(),
+          );
           // CustomWidgetError(
           //   msgError: state.errMessage,
           // );

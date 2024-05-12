@@ -6,8 +6,8 @@ import 'package:bookly/core/utils/styles.dart';
 import 'package:bookly/core/widgets/two_raw_text_with_opacity.dart';
 import 'package:flutter/material.dart';
 
-class BookDetaielsSection extends StatelessWidget {
-  const BookDetaielsSection({super.key, required this.book});
+class BookDetailsSection extends StatelessWidget {
+  const BookDetailsSection({super.key, required this.book});
   final BookModel book;
 
   @override
