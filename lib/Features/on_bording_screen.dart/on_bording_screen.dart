@@ -7,7 +7,7 @@ import 'package:go_router/go_router.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class OnBoardingScreen extends StatefulWidget {
-  OnBoardingScreen({super.key});
+  const OnBoardingScreen({super.key});
   @override
   State<OnBoardingScreen> createState() => _OnBoardingScreenState();
 }
@@ -27,13 +27,13 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 });
               },
               controller: _controller,
-              children: [
+              children: const [
                 IntroPage1(), //0
                 IntroPage2(), //1
                 IntroPage3(), //2
               ]),
           Container(
-              alignment: Alignment(0, 0.8),
+              alignment: const Alignment(0, 0.8),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
@@ -48,9 +48,8 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   onLastPage
                       ? TextButton(
                           onPressed: () {
-                            GoRouter.of(context).push(
-                              AppRouter.kloginpage,
-                            );
+                            GoRouter.of(context)
+                                .pushReplacement(AppRouter.ksplashview);
                           },
                           child: const Text("DONE"),
                         )

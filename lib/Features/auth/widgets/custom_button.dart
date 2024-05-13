@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class CustomButton extends StatelessWidget {
-  CustomButton({required this.text, this.onPressed});
+  CustomButton({super.key, required this.text, this.onPressed});
   String text;
   VoidCallback? onPressed;
   @override

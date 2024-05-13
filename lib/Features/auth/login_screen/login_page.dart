@@ -13,7 +13,7 @@ import 'package:google_sign_in/google_sign_in.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
 class LoginPage extends StatefulWidget {
-  LoginPage({super.key});
+  const LoginPage({super.key});
   static const String id = 'LoginPage';
 
   @override
@@ -93,7 +93,7 @@ class _LoginPageState extends State<LoginPage> {
                     try {
                       await userLogin();
                       showSnackBar(context, 'successfully Login.');
-                      GoRouter.of(context).push(AppRouter.ksplashview);
+                      GoRouter.of(context).pushReplacement(AppRouter.khomeview);
                     } on FirebaseAuthException catch (e) {
                       if (e.code == 'user-not-found') {
                         showSnackBar(context, "No user found for that email");
@@ -170,7 +170,7 @@ class _LoginPageState extends State<LoginPage> {
                 await signInWithGoogle();
                 GoRouter.of(context).push(AppRouter.ksplashview);
               },
-              image: KGoogleIcon,
+              image: kGoogleIcon,
               title: 'Login With Google'),
           const SizedBox(height: 16),
           _socialButtonWidget(

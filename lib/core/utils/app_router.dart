@@ -25,7 +25,7 @@ abstract class AppRouter {
     GoRoute(
         path: '/',
         builder: (BuildContext context, GoRouterState state) {
-          return OnBoardingScreen();
+          return const OnBoardingScreen();
         }),
     GoRoute(
         path: ksplashview,
@@ -35,12 +35,12 @@ abstract class AppRouter {
     GoRoute(
         path: kregisterpage,
         builder: (context, state) {
-          return RegisterPage();
+          return const RegisterPage();
         }),
     GoRoute(
         path: kloginpage,
         builder: (context, state) {
-          return LoginPage();
+          return const LoginPage();
         }),
     GoRoute(
         path: khomeview,

@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class IntroPage3 extends StatelessWidget {
@@ -13,8 +12,8 @@ class IntroPage3 extends StatelessWidget {
           "assets/images/thumb.gif",
           fit: BoxFit.values[6],
         ),
-        Padding(
-          padding: const EdgeInsets.only(bottom: 200),
+        const Padding(
+          padding: EdgeInsets.only(bottom: 200),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [

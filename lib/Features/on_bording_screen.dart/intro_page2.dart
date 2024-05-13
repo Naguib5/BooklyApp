@@ -6,7 +6,7 @@ class IntroPage2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Color(0xff24678E),
+      color: const Color(0xff24678E),
       child: Image.asset(
         "assets/images/image2.gif",
         fit: BoxFit.values[5],
